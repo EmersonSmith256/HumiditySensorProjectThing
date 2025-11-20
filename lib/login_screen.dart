@@ -1,137 +1,176 @@
 //File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
 
 import 'package:flutter/material.dart';
+import 'signup_screen.dart';
 
 
 class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double formWidth = width < 500 ? width * 0.9 : 400;
     return Scaffold(
       backgroundColor: Color(0xffffffff),
-      body:Align(
-        alignment:Alignment.center,
+      body:Padding(
+        padding:EdgeInsets.fromLTRB(16, 50, 16, 16),
+        child: Card(
+          elevation: 8.0, // Controls the shadow size
+          //color: Colors.blueAccent[100], // Sets the background color
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+        margin: EdgeInsets.fromLTRB(50, 30, 50, 30),
         child:Padding(
-          padding:EdgeInsets.fromLTRB(16, 50, 16, 16),
-          child:SingleChildScrollView(
-            child:
-            Column(
-              mainAxisAlignment:MainAxisAlignment.start,
-              crossAxisAlignment:CrossAxisAlignment.start,
-              mainAxisSize:MainAxisSize.max,
-              children: [
-                Text(
-                  "Login",
-                  textAlign: TextAlign.start,
-                  overflow:TextOverflow.clip,
+          padding: EdgeInsets.all(40),
+        child:SingleChildScrollView(
+          child: Align(
+            alignment: Alignment.center,
+            child:Column(
+            mainAxisAlignment:MainAxisAlignment.start,
+            crossAxisAlignment:CrossAxisAlignment.start,
+            mainAxisSize:MainAxisSize.max,
+            children: [
+              Text(
+                "Login",
+                textAlign: TextAlign.start,
+                overflow:TextOverflow.clip,
+                style:TextStyle(
+                  fontWeight:FontWeight.w700,
+                  fontStyle:FontStyle.normal,
+                  fontSize:24,
+                  color:Color(0xff000000),
+                ),
+              ),
+              Align(
+              child:Container(
+                width: formWidth,
+                padding:EdgeInsets.fromLTRB(0, 30, 0, 16),
+                child:TextField(
+                  controller:TextEditingController(),
+                  obscureText:false,
+                  textAlign:TextAlign.start,
+                  maxLines:1,
                   style:TextStyle(
-                    fontWeight:FontWeight.w700,
+                    fontWeight:FontWeight.w400,
                     fontStyle:FontStyle.normal,
-                    fontSize:24,
+                    fontSize:14,
                     color:Color(0xff000000),
                   ),
-                ),
-                Padding(
-                  padding:EdgeInsets.fromLTRB(0, 30, 0, 16),
-                  child:TextField(
-                    controller:TextEditingController(),
-                    obscureText:false,
-                    textAlign:TextAlign.start,
-                    maxLines:1,
-                    style:TextStyle(
+                  decoration:InputDecoration(
+                    disabledBorder:OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(12.0),
+                      borderSide:BorderSide(
+                          color:Color(0x00ffffff),
+                          width:1
+                      ),
+                    ),
+                    focusedBorder:OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(12.0),
+                      borderSide:BorderSide(
+                          color:Color(0x00ffffff),
+                          width:1
+                      ),
+                    ),
+                    enabledBorder:OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(12.0),
+                      borderSide:BorderSide(
+                          color:Color(0x00ffffff),
+                          width:1
+                      ),
+                    ),
+                    hintText:"Email",
+                    hintStyle:TextStyle(
                       fontWeight:FontWeight.w400,
                       fontStyle:FontStyle.normal,
                       fontSize:14,
-                      color:Color(0xff000000),
+                      color:Color(0xff9f9d9d),
                     ),
-                    decoration:InputDecoration(
-                      disabledBorder:OutlineInputBorder(
-                        borderRadius:BorderRadius.circular(12.0),
-                        borderSide:BorderSide(
-                            color:Color(0x00ffffff),
-                            width:1
-                        ),
-                      ),
-                      focusedBorder:OutlineInputBorder(
-                        borderRadius:BorderRadius.circular(12.0),
-                        borderSide:BorderSide(
-                            color:Color(0x00ffffff),
-                            width:1
-                        ),
-                      ),
-                      enabledBorder:OutlineInputBorder(
-                        borderRadius:BorderRadius.circular(12.0),
-                        borderSide:BorderSide(
-                            color:Color(0x00ffffff),
-                            width:1
-                        ),
-                      ),
-                      hintText:"Email",
-                      hintStyle:TextStyle(
-                        fontWeight:FontWeight.w400,
-                        fontStyle:FontStyle.normal,
-                        fontSize:14,
-                        color:Color(0xff9f9d9d),
-                      ),
-                      filled:true,
-                      fillColor:Color(0xfff2f2f3),
-                      isDense:false,
-                      contentPadding:EdgeInsets.symmetric(vertical: 8,horizontal:12),
-                    ),
+                    filled:true,
+                    fillColor:Color(0xfff2f2f3),
+                    isDense:false,
+                    contentPadding:EdgeInsets.symmetric(vertical: 8,horizontal:12),
                   ),
                 ),
-                Padding(
-                  padding:EdgeInsets.fromLTRB(0, 0, 0, 16),
-                  child:TextField(
-                    controller:TextEditingController(),
-                    obscureText:false,
-                    textAlign:TextAlign.start,
-                    maxLines:1,
-                    style:TextStyle(
+              ),),
+              Padding(
+                padding:EdgeInsets.fromLTRB(0, 0, 0, 16),
+                child:TextField(
+                  controller:TextEditingController(),
+                  obscureText:false,
+                  textAlign:TextAlign.start,
+                  maxLines:1,
+                  style:TextStyle(
+                    fontWeight:FontWeight.w400,
+                    fontStyle:FontStyle.normal,
+                    fontSize:14,
+                    color:Color(0xff000000),
+                  ),
+                  decoration:InputDecoration(
+                    disabledBorder:OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(12.0),
+                      borderSide:BorderSide(
+                          color:Color(0x00ffffff),
+                          width:1
+                      ),
+                    ),
+                    focusedBorder:OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(12.0),
+                      borderSide:BorderSide(
+                          color:Color(0x00ffffff),
+                          width:1
+                      ),
+                    ),
+                    enabledBorder:OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(12.0),
+                      borderSide:BorderSide(
+                          color:Color(0x00ffffff),
+                          width:1
+                      ),
+                    ),
+                    hintText:"Password",
+                    hintStyle:TextStyle(
                       fontWeight:FontWeight.w400,
                       fontStyle:FontStyle.normal,
                       fontSize:14,
-                      color:Color(0xff000000),
+                      color:Color(0xff9f9d9d),
                     ),
-                    decoration:InputDecoration(
-                      disabledBorder:OutlineInputBorder(
-                        borderRadius:BorderRadius.circular(12.0),
-                        borderSide:BorderSide(
-                            color:Color(0x00ffffff),
-                            width:1
-                        ),
-                      ),
-                      focusedBorder:OutlineInputBorder(
-                        borderRadius:BorderRadius.circular(12.0),
-                        borderSide:BorderSide(
-                            color:Color(0x00ffffff),
-                            width:1
-                        ),
-                      ),
-                      enabledBorder:OutlineInputBorder(
-                        borderRadius:BorderRadius.circular(12.0),
-                        borderSide:BorderSide(
-                            color:Color(0x00ffffff),
-                            width:1
-                        ),
-                      ),
-                      hintText:"Password",
-                      hintStyle:TextStyle(
-                        fontWeight:FontWeight.w400,
-                        fontStyle:FontStyle.normal,
-                        fontSize:14,
-                        color:Color(0xff9f9d9d),
-                      ),
-                      filled:true,
-                      fillColor:Color(0xfff2f2f3),
-                      isDense:false,
-                      contentPadding:EdgeInsets.symmetric(vertical: 8,horizontal:12),
-                    ),
+                    filled:true,
+                    fillColor:Color(0xfff2f2f3),
+                    isDense:false,
+                    contentPadding:EdgeInsets.symmetric(vertical: 8,horizontal:12),
                   ),
                 ),
-                Padding(
+              ),
+                Align(
+                  child: Container(
                   padding:EdgeInsets.fromLTRB(0, 30, 0, 16),
                   child:MaterialButton(
+                    onPressed:(){
+                      print("button pressed");
+                    },
+                    color:Color(0xffff5630),
+                    elevation:0,
+                    shape:RoundedRectangleBorder(
+                      borderRadius:BorderRadius.circular(10.0),
+                    ),
+                    padding:EdgeInsets.all(16),
+                    textColor:Color(0xffffffff),
+                    height:40,
+                    minWidth:formWidth,
+                    child:Text(
+                      "Login",
+                      style: TextStyle(
+                        fontSize:16,
+                        fontWeight:FontWeight.w700,
+                        fontStyle:FontStyle.normal,
+                      ),
+                    ),
+                  ),),
+              ),
+              Padding(
+                padding:EdgeInsets.fromLTRB(0, 30, 0, 16),
+                child:MaterialButton(
                     onPressed:(){},
                     color:Color(0xffff5630),
                     elevation:0,
@@ -139,50 +178,60 @@ class LoginScreen extends StatelessWidget {
                       borderRadius:BorderRadius.circular(12.0),
                     ),
                     padding:EdgeInsets.all(16),
-                    child:Text("Button", style: TextStyle( fontSize:16,
-                      fontWeight:FontWeight.w700,
-                      fontStyle:FontStyle.normal,
-                    ),),
                     textColor:Color(0xffffffff),
                     height:40,
                     minWidth:MediaQuery.of(context).size.width,
-                  ),
+                    child:Text("67", style: TextStyle( fontSize:16,
+                      fontWeight:FontWeight.w700,
+                      fontStyle:FontStyle.normal,
+                    ),)
                 ),
-                Align(
-                  alignment:Alignment.center,
-                  child:Row(
-                    mainAxisAlignment:MainAxisAlignment.start,
-                    crossAxisAlignment:CrossAxisAlignment.start,
-                    mainAxisSize:MainAxisSize.min,
-                    children:[
+              ),
+              Align(
+                alignment:Alignment.center,
+                child:Row(
+                  mainAxisAlignment:MainAxisAlignment.start,
+                  crossAxisAlignment:CrossAxisAlignment.start,
+                  mainAxisSize:MainAxisSize.min,
+                  children:[
 
-                      Text(
-                        "Don't Have an account?",
+                    Text(
+                      "Don't Have an account?",
+                      textAlign: TextAlign.start,
+                      overflow:TextOverflow.clip,
+                      softWrap: true,
+                      style:TextStyle(
+                        fontWeight:FontWeight.w400,
+                        fontStyle:FontStyle.normal,
+                        fontSize:14,
+                        color:Color(0xff000000),
+                      ),
+                    ),
+                    Padding(
+                      padding:EdgeInsets.fromLTRB(4, 0, 0, 0),
+                      child: MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => SignUpScreen())
+                          );
+                        },
+                        child: Text(
+                        "Sign Up",
                         textAlign: TextAlign.start,
                         overflow:TextOverflow.clip,
                         style:TextStyle(
-                          fontWeight:FontWeight.w400,
+                          fontWeight:FontWeight.w700,
                           fontStyle:FontStyle.normal,
                           fontSize:14,
-                          color:Color(0xff000000),
+                          color:Color(0xffff5630),
                         ),
                       ),
-                      Padding(
-                        padding:EdgeInsets.fromLTRB(4, 0, 0, 0),
-                        child:Text(
-                          "Sign Up",
-                          textAlign: TextAlign.start,
-                          overflow:TextOverflow.clip,
-                          style:TextStyle(
-                            fontWeight:FontWeight.w700,
-                            fontStyle:FontStyle.normal,
-                            fontSize:14,
-                            color:Color(0xffff5630),
-                          ),
-                        ),
-                      ),
-                    ],),),
-              ],),),),),
-    )
+                    ),),),
+                  ],),),
+            ],),),),),
+    )))
     ;}
 }
