@@ -11,7 +11,7 @@ class LoginScreen extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double formWidth = width < 500 ? width * 0.9 : 400;
     return Scaffold(
-      backgroundColor: Color(0xffffffff),
+      backgroundColor: Color(0xffFFC9DF),
       body:Padding(
         padding:EdgeInsets.fromLTRB(16, 50, 16, 16),
         child: Card(
@@ -87,13 +87,15 @@ class LoginScreen extends StatelessWidget {
                       color:Color(0xff9f9d9d),
                     ),
                     filled:true,
-                    fillColor:Color(0xfff2f2f3),
+                    fillColor:Color(0xffDFFFD1),
                     isDense:false,
                     contentPadding:EdgeInsets.symmetric(vertical: 8,horizontal:12),
                   ),
                 ),
               ),),
-              Padding(
+              Align(
+                child:Container(
+                  width: formWidth,
                 padding:EdgeInsets.fromLTRB(0, 0, 0, 16),
                 child:TextField(
                   controller:TextEditingController(),
@@ -136,12 +138,12 @@ class LoginScreen extends StatelessWidget {
                       color:Color(0xff9f9d9d),
                     ),
                     filled:true,
-                    fillColor:Color(0xfff2f2f3),
+                    fillColor:Color(0xffFFE1D4),
                     isDense:false,
                     contentPadding:EdgeInsets.symmetric(vertical: 8,horizontal:12),
                   ),
                 ),
-              ),
+              ),),
                 Align(
                   child: Container(
                   padding:EdgeInsets.fromLTRB(0, 30, 0, 16),
@@ -168,25 +170,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),),
               ),
-              Padding(
-                padding:EdgeInsets.fromLTRB(0, 30, 0, 16),
-                child:MaterialButton(
-                    onPressed:(){},
-                    color:Color(0xffff5630),
-                    elevation:0,
-                    shape:RoundedRectangleBorder(
-                      borderRadius:BorderRadius.circular(12.0),
-                    ),
-                    padding:EdgeInsets.all(16),
-                    textColor:Color(0xffffffff),
-                    height:40,
-                    minWidth:MediaQuery.of(context).size.width,
-                    child:Text("67", style: TextStyle( fontSize:16,
-                      fontWeight:FontWeight.w700,
-                      fontStyle:FontStyle.normal,
-                    ),)
-                ),
-              ),
               Align(
                 alignment:Alignment.center,
                 child:Row(
@@ -194,7 +177,6 @@ class LoginScreen extends StatelessWidget {
                   crossAxisAlignment:CrossAxisAlignment.start,
                   mainAxisSize:MainAxisSize.min,
                   children:[
-
                     Text(
                       "Don't Have an account?",
                       textAlign: TextAlign.start,
