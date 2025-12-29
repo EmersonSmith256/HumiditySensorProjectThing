@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "69797225798",
-    "project_id": "humidity-sensor-dc174",
-    "storage_bucket": "humidity-sensor-dc174.firebasestorage.app"
+    "project_number": "987160406041",
+    "firebase_url": "https://humidity-project-db-default-rtdb.firebaseio.com",
+    "project_id": "humidity-project-db",
+    "storage_bucket": "humidity-project-db.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:69797225798:android:3b6b07001f3c069c8ef147",
+        "mobilesdk_app_id": "1:987160406041:android:069dbfd2aaf2665bdaa288",
         "android_client_info": {
           "package_name": "com.swdclub.iotsensors"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAaKEkgQJc7j0RXiI3h63MbrdPkSlPCsSg"
+          "current_key": "AIzaSyCCMi8cpnbpxz42n-_eYAIJRSKMn7qm-M4"
         }
       ],
       "services": {
